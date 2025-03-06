@@ -14,19 +14,22 @@ function App() {
         className="fixed inset-0 flex w-screen items-center justify-center bg-black/30 p-4 transition duration-300 ease-out data-[closed]:opacity-0"
 
       >
-        {/* The backdrop, rendered as a fixed sibling to the panel container */}
-        <DialogBackdrop className="fixed inset-0 bg-black/30" />
+        <DialogBackdrop
+          transition
+          className="fixed inset-0 bg-black/30 duration-300 ease-out data-[closed]:opacity-0"
+        />
+        <div className="fixed inset-0 flex items-end justify-center">
+          <DialogPanel
+              transition
+              className="max-w-lg w-full space-y-4 bg-white  pb-12 pt-4 duration-300 ease-out data-[closed]:scale-95 data-[closed]:opacity-0"
+            >
+            <div className="flex justify-between border-b-1 border-gray-100 pb-3 px-8">
+              <span onClick={() => setIsOpen(false)} className='font-bold text-gray-400'>取消</span>
+              <span className="font-bold text-rose-700">确定</span>
+            </div>
 
-        {/* Full-screen container to center the panel */}
-        <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
-          {/* The actual dialog panel  */}
-          <DialogPanel className="max-w-lg space-y-4 bg-white p-12">
-            <DialogTitle className="font-bold">Deactivate account</DialogTitle>
-            <Description>This will permanently deactivate your account</Description>
-            <p>Are you sure you want to deactivate your account? All of your data will be permanently removed.</p>
-            <div className="flex gap-4">
-              <button onClick={() => setIsOpen(false)}>Cancel</button>
-              <button onClick={() => setIsOpen(false)}>Deactivate</button>
+            <div className="flex justify-center items-center py-6 px-8">
+              xx
             </div>
           </DialogPanel>
         </div>
