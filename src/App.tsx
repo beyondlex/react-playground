@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 
-import { Description, Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
+import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react'
 
 function App() {
   let [isOpen, setIsOpen] = useState(false)
