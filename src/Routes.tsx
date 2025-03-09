@@ -8,6 +8,7 @@ import Spinner from './Spinner';
 import ListPage from './Loading';
 import ListPage2 from './Loading2';
 import ListPage3 from './Loading3';
+import ListPage4 from './Loading4';
 
 export default () => {
   const memeizedRoutes = useMemo(() => (
@@ -17,6 +18,7 @@ export default () => {
         <Route path='/loading' element={<ListPage/>}></Route>
         <Route path='/loading2' element={<ListPage2/>}></Route>
         <Route path='/loading3' element={<ListPage3/>}></Route>
+        <Route path='/loading4' element={<ListPage4/>}></Route>
     </Routes>
   ), []);
 
