@@ -109,7 +109,6 @@ export function TransitionList<T>({
                     <li key={index}>{renderItem(item)}</li>
                   ))}
                 </ul>
-                
                 {renderFooter && (
                   <div className="mt-6">
                     {renderFooter(data)}
